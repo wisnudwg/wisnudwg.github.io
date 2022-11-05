@@ -1,0 +1,67 @@
+@import '../../../styles/animations.scss';
+@import '../../../styles/colors.scss';
+
+@mixin menu-link {
+  a, span {
+    color: $gray-std;
+    cursor: pointer;
+    font-size: 1.25rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 550;
+    letter-spacing: 0.2vw;
+  
+    &:hover {
+      color: $gray-light;
+    }
+  }
+}
+
+#HeaderMenu {
+  background-color: $black-dark;
+
+  .ant-col {
+
+    .menu-btn {
+      background-color: $black-std;
+      border: 2px solid $gray-std;
+      transform: scale(0.8, 1.1);
+      z-index: 10;
+      
+      .menu-icon {
+        color: $gray-std;
+        font-size: 1.3rem;
+
+        &:hover {
+          color: $gray-light;
+        }
+      }
+
+      &:hover {
+        border-color: $yellow-light;
+      }
+    }
+
+    @media only screen and (min-width: 1100px) {
+      .menu-btn {
+        display: none;
+      }
+    }
+
+    .menu-link {
+      @include menu-link;
+    }
+
+    .menu-link-active {
+      @include menu-link;
+      a, span {
+        color: $yellow-light;
+      }
+    }
+
+    @media only screen and (max-width: 1100px) {
+      .menu-link, .menu-link-active {
+        display: none;
+      }
+    }
+  }
+}

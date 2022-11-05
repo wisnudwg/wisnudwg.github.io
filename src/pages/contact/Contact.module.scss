@@ -1,0 +1,10 @@
+@import '../../styles/animations.scss';
+@import '../../styles/colors.scss';
+
+#Contact {
+  padding: 5vh 5vw;
+
+  .platform-icon {
+    transform: scale(1.5);
+  }
+}

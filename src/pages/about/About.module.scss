@@ -1,0 +1,9 @@
+@import '../../styles/animations.scss';
+@import '../../styles/colors.scss';
+
+#AboutContainer {
+  .section-divider {
+    background-color: $gray-dark;
+    border-width: 2px;
+  }
+}
